@@ -1,6 +1,6 @@
 local Underhollow = {}
 
-Underhollow.Enabled = Menu.AddOption({"Utility", "UnderHollowMap"}, "{1} Enabled", "v0.1")
+Underhollow.Enabled = Menu.AddOption({"Utility", "UnderHollowMap"}, "{1} Enabled", "v0.1.1")
 Underhollow.Map_X = Menu.AddOption({"Utility", "UnderHollowMap"}, "{2} Map X", "X screen coordinate", 0, 4000, 2)
 Underhollow.Map_Y = Menu.AddOption({"Utility","UnderHollowMap"}, "{3} Map Y", "Y screen coordinate", 0, 4000, 2)
 Underhollow.Map_Size = Menu.AddOption({"Utility","UnderHollowMap"}, "{4} Map Size", "Map scale", 50, 400, 5)
@@ -246,8 +246,8 @@ function Underhollow.OnDraw()
 						Renderer.SetDrawColor(255, 255, 255, 255)
 						Renderer.DrawText(Underhollow.Font, x, y, math.floor(3 - (GameRules.GetGameTime() - last_attack[Unit])))
 					end
-				elseif name then
-					Renderer.DrawText(Underhollow.Font, x, y, name)
+				-- elseif name then
+					-- Renderer.DrawText(Underhollow.Font, x, y, name)
 				end
 			end
 		elseif UnitPos:Length2DSqr() > 0 then
