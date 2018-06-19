@@ -101,6 +101,8 @@ function Underhollow.OnDraw()
 		Underhollow.Init = true
 	end
 
+	if not Menu.IsEnabled(Underhollow.Enabled) then return end
+
 	local myHero = Heroes.GetLocal()
 
 	if not myHero then return end
